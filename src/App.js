@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import html2canvas from 'html2canvas';
 
+
 function App() {
   var titulo = <p className='titulo'>Generador de tarjetas perzonalizadas</p>
   var copy = <small className="copyrigth">Copyrigth &copy; 2021 | Diseñado y Desarrollado por: <a
@@ -33,9 +34,9 @@ var burbujas2 = <svg className='burbuja2' viewBox="0 0 200 200" xmlns="http://ww
 
   const onClickExportar=function(evento){
     html2canvas(document.querySelector("#meme")).then(canvas => {
-      var img    = canvas.toDataURL("image/png");
+      var img    = canvas.toDataURL("image/jpg");
       var link = document.createElement('a');
-      link.download = 'meme.png';
+      link.download = 'meme.jpg';
       link.href = img;
       link.click();
     });
@@ -48,7 +49,7 @@ var burbujas2 = <svg className='burbuja2' viewBox="0 0 200 200" xmlns="http://ww
     {burbujas}
     {burbujas2}
     <select onChange={onChangeImagen}>
-      <option value="react" disabled selected>Seleccione</option>
+      <option value="" disabled selected>Seleccione</option>
       <option value="fiestas1">Fiestas 1</option>
       <option value="fiestas2">Fiestas 2</option>
       <option value="fiestas3">Fiestas 3</option>
@@ -65,7 +66,7 @@ var burbujas2 = <svg className='burbuja2' viewBox="0 0 200 200" xmlns="http://ww
     <div className="meme" id="meme">
         <span>{linea1}</span><br/>
         <span>{linea2}</span>
-        <img src={"/img/"+imagen+".jpg"}/>
+        <img src={'/tarjetaspersonalizadas/img/'+imagen+'.jpg'} alt='imagen'/>
     </div>
     {copy}
     </div>
