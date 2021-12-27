@@ -150,7 +150,7 @@ img{
 .meme span{
   position: absolute;
   margin-top: 210px;
-  font-size: 16px;
+  font-size: 1.7rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 800;
   color: white;
@@ -163,7 +163,7 @@ img{
                -1px 0 0 rgb(23 23 23), 
                0 -1px 0 rgb(23 23 23), 
                0 1px 0 rgb(23 23 23), 
-               0 0 10px rgb(0 0 0 / 99%);
+               0 0 8px rgb(0 0 0 / 99%);
 }
 .meme span:nth-child(1){
   margin-top: 20px;
@@ -189,7 +189,7 @@ img{
 }
 @media(min-width:480px){
   .meme span{
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     margin-top: 290px;
   }
 }
@@ -254,6 +254,7 @@ img{
 @media(min-width:1200px){
   .meme span{
     margin-top: 780px;
+    font-size: 4rem;
   }
 }
 .copyrigth{
